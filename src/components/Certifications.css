@@ -131,3 +131,149 @@
     transform: translateY(-5px) translateX(0);
   }
 }
+
+/* --- Programing Stats Circular Graphs --- */
+
+.stat-card {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1rem;
+}
+
+.stats-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.gfg-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(
+    var(--neon-green) 0% 35%, 
+    #ffc107 35% 80%, 
+    #ff4d4d 80% 100%
+  );
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.1);
+  transition: var(--transition);
+}
+
+.gfg-circle {
+  background: conic-gradient(
+    var(--neon-green) 0% 100%
+  );
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.1);
+}
+
+.cert-card:hover .stat-circle {
+  transform: scale(1.05);
+}
+
+.stat-inner {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background: var(--bg-card);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.stat-num {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.stat-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-item {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.easy .dot { background-color: var(--neon-green); box-shadow: 0 0 5px var(--neon-green); }
+.medium .dot { background-color: #ffc107; box-shadow: 0 0 5px #ffc107; }
+.hard .dot { background-color: #ff4d4d; box-shadow: 0 0 5px #ff4d4d; }
+
+.stat-desc {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* Ensure GeeksForGeeks icon uses original styling since it's not a trophy but we still want green glow */
+.cert-icon-wrapper.gfg {
+  color: var(--neon-green);
+  background: rgba(0, 255, 102, 0.1);
+  border-color: rgba(0, 255, 102, 0.3);
+  box-shadow: inset 0 0 15px rgba(0, 255, 102, 0.1);
+}
+
+.cert-card:hover .cert-icon-wrapper.gfg {
+  color: var(--bg-dark);
+  background: var(--neon-green);
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.5);
+}
+
+.loading-text {
+  text-align: center;
+  width: 100%;
+  font-style: italic;
+  animation: pulse 1.5s infinite;
+}
+
+@media screen and (max-width: 480px) {
+  .stats-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

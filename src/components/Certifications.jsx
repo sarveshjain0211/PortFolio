@@ -1,8 +1,51 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Certifications.css';
 import { FaCertificate, FaTrophy, FaCode } from 'react-icons/fa';
 
 const Certifications = () => {
+  const [lcData, setLcData] = useState({ easy: 0, medium: 0, hard: 0, total: 0, loading: true });
+  const [gfgData, setGfgData] = useState({ total: 0, loading: true });
+
+  useEffect(() => {
+    // Fetch LeetCode Data using a highly stable community REST API
+    fetch('https://alfa-leetcode-api.onrender.com/__sarveshjain__0211/solved')
+      .then(res => res.json())
+      .then(data => {
+        if (!data.errors && data.solvedProblem) {
+          setLcData({
+            easy: data.easySolved || 0,
+            medium: data.mediumSolved || 0,
+            hard: data.hardSolved || 0,
+            total: data.solvedProblem || 0,
+            loading: false
+          });
+        }
+      })
+      .catch(err => {
+        console.error("Error fetching LeetCode stats:", err);
+        setLcData(prev => ({ ...prev, loading: false }));
+      });
+
+    // Fetch GeeksforGeeks Data
+    // Note: Since public GFG APIs can be volatile, we add a fallback logic.
+    fetch('https://geeks-for-geeks-stats-api.vercel.app/?userName=sarveshjcecp')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.success && data.data) {
+          setGfgData({
+            total: data.data.totalProblemsSolved || 0,
+            loading: false
+          });
+        } else {
+           setGfgData(prev => ({ ...prev, loading: false }));
+        }
+      })
+      .catch(err => {
+        console.error("Error fetching GFG stats:", err);
+        setGfgData(prev => ({ ...prev, loading: false }));
+      });
+  }, []);
+
   return (
     <section id="certifications" className="section cert-section">
       <h2 className="section-title">Achievements & <span>Certifications</span></h2>
@@ -52,33 +95,80 @@ const Certifications = () => {
             <h3 className="column-title"><FaTrophy className="title-icon" /> Programming Profiles</h3>
             
             <div className="cert-list">
-              <div className="cert-card glass-card">
-                <div className="cert-icon-wrapper trophy">
-                  <FaCode />
-                </div>
-                <div className="cert-content">
-                  <h4>
-                    <a href="https://leetcode.com/u/__sarveshjain__0211/" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your LeetCode profile link here">
-                      LeetCode
-                    </a>
-                  </h4>
-                  <h5>Competitive Programming</h5>
-                  <p className="cert-desc">Active problem solver focusing on Data Structures and Algorithms.</p>
+              <div className="cert-card glass-card stat-card">
+                <div className="cert-content full-width">
+                  <div className="stat-header">
+                    <div className="cert-icon-wrapper trophy">
+                      <FaCode />
+                    </div>
+                    <div>
+                      <h4>
+                        <a href="https://leetcode.com/u/__sarveshjain__0211/" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your LeetCode profile link here">
+                          LeetCode
+                        </a>
+                      </h4>
+                      <h5>Competitive Programming</h5>
+                    </div>
+                  </div>
+                  
+                  {lcData.loading ? (
+                    <p className="cert-desc loading-text">Loading stats...</p>
+                  ) : (
+                    <div className="stats-container">
+                      <div 
+                        className="stat-circle total-circle"
+                        style={{
+                          background: `conic-gradient(
+                            var(--neon-green) 0% ${(lcData.easy / lcData.total) * 100}%, 
+                            #ffc107 ${(lcData.easy / lcData.total) * 100}% ${((lcData.easy + lcData.medium) / lcData.total) * 100}%, 
+                            #ff4d4d ${((lcData.easy + lcData.medium) / lcData.total) * 100}% 100%
+                          )`
+                        }}
+                      >
+                         <div className="stat-inner">
+                            <span className="stat-num">{lcData.total}</span>
+                            <span className="stat-label">Solved</span>
+                         </div>
+                      </div>
+                      <div className="stat-details">
+                         <div className="stat-item easy"><span className="dot"></span> {lcData.easy} Easy</div>
+                         <div className="stat-item medium"><span className="dot"></span> {lcData.medium} Medium</div>
+                         <div className="stat-item hard"><span className="dot"></span> {lcData.hard} Hard</div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
-              <div className="cert-card glass-card">
-                <div className="cert-icon-wrapper trophy">
-                  <FaCode />
-                </div>
-                <div className="cert-content">
-                  <h4>
-                    <a href="https://www.geeksforgeeks.org/profile/sarveshjcecp?tab=activity" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your GeeksforGeeks profile link here">
-                      GeeksforGeeks
-                    </a>
-                  </h4>
-                  <h5>Problem Solving</h5>
-                  <p className="cert-desc">Practicing algorithmic problems and building core computer science concepts.</p>
+              <div className="cert-card glass-card stat-card">
+                <div className="cert-content full-width">
+                  <div className="stat-header">
+                     <div className="cert-icon-wrapper trophy gfg">
+                       <FaCode />
+                     </div>
+                     <div>
+                       <h4>
+                         <a href="https://www.geeksforgeeks.org/profile/sarveshjcecp?tab=activity" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your GeeksforGeeks profile link here">
+                           GeeksforGeeks
+                         </a>
+                       </h4>
+                       <h5>Problem Solving</h5>
+                     </div>
+                  </div>
+                  
+                  {gfgData.loading ? (
+                    <p className="cert-desc loading-text">Loading stats...</p>
+                  ) : (
+                    <div className="stats-container gfg-container">
+                      <div className="stat-circle gfg-circle">
+                         <div className="stat-inner">
+                            <span className="stat-num">{gfgData.total || "260+"}</span>
+                            <span className="stat-label">Problems</span>
+                         </div>
+                      </div>
+                      <p className="cert-desc stat-desc">Practicing algorithmic problems and building core computer science concepts.</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
