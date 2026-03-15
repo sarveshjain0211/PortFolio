@@ -8,15 +8,15 @@ const Certifications = () => {
 
   useEffect(() => {
     // Fetch LeetCode Data using a highly stable community REST API
-    fetch('https://alfa-leetcode-api.onrender.com/__sarveshjain__0211/solved')
+    fetch('https://leetcode-api-faisalshohag.vercel.app/__sarveshjain__0211')
       .then(res => res.json())
       .then(data => {
-        if (!data.errors && data.solvedProblem) {
+        if (!data.errors && data.totalSolved) {
           setLcData({
             easy: data.easySolved || 0,
             medium: data.mediumSolved || 0,
             hard: data.hardSolved || 0,
-            total: data.solvedProblem || 0,
+            total: data.totalSolved || 0,
             loading: false
           });
         }
