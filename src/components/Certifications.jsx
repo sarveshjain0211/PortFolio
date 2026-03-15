@@ -64,7 +64,22 @@ const Certifications = () => {
                 </div>
                 <div className="cert-content">
                   <h4>
-                    <a href="#" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your certificate link here">
+                    <a href="https://d3uam8jk4sa4y4.cloudfront.net/static/certificates/graph_camp/sarvesh-jain.png" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your certificate link here">
+                      Graphs Camp Participation Certificate
+                    </a>
+                  </h4>
+                  <h5>AlgoUniversity</h5>
+                  <span className="cert-date">Issued: Oct. 2025</span>
+                </div>
+              </div>
+
+              <div className="cert-card glass-card">
+                <div className="cert-icon-wrapper">
+                  <FaCertificate />
+                </div>
+                <div className="cert-content">
+                  <h4>
+                    <a href="https://www.cipherschools.com/certificate/preview?id=687d9f8d3eaa79325b2d28f2" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your certificate link here">
                       Full Stack Development
                     </a>
                   </h4>
@@ -79,7 +94,22 @@ const Certifications = () => {
                 </div>
                 <div className="cert-content">
                   <h4>
-                    <a href="#" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your certificate link here">
+                    <a href="Privacy and Security in Online Social Media.pdf" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your certificate link here">
+                      Privacy and Security in Online Social Media
+                    </a>
+                  </h4>
+                  <h5>NPTEL</h5>
+                  <span className="cert-date">Issued: May 2025</span>
+                </div>
+              </div>
+
+              <div className="cert-card glass-card">
+                <div className="cert-icon-wrapper">
+                  <FaCertificate />
+                </div>
+                <div className="cert-content">
+                  <h4>
+                    <a href="Design and analysis of algorithms.pdf" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your certificate link here">
                       Design & Analysis of Algorithms
                     </a>
                   </h4>
