@@ -12,12 +12,12 @@ const projectsData = [
     image: '/indikart_preview.png'
   },
   {
-    title: 'Project Name 2',
-    description: 'This is a sample description for your second project. Highlight your role and the main features built.',
-    techStack: ['HTML/CSS', 'Vanilla JS', 'API'],
-    githubLink: '#',
+    title: 'Lost and Found Management System (back2U)',
+    description: 'A dedicated web platform designed to help people easily report and find lost items. It streamlines the recovery process by connecting finders with owners quickly and efficiently.',
+    techStack: ['HTML', 'CSS', 'JavaScript','PHP','MySQL'],
+    githubLink: 'https://github.com/sarveshjain0211/back2U',
     liveLink: '#',
-    image: 'https://via.placeholder.com/600x400/1a1a2e/bc13fe?text=Project+2'
+    image: 'back2U.jpeg'
   },
   {
     title: 'Project Name 3',
