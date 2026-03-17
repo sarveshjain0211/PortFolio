@@ -20,12 +20,12 @@ const projectsData = [
     image: 'back2U.jpeg'
   },
   {
-    title: 'Project Name 3',
-    description: 'Third project description goes here. Focus on the value provided by the application and any unique challenges overcome.',
-    techStack: ['Python', 'Django', 'PostgreSQL'],
-    githubLink: '#',
-    liveLink: '#',
-    image: 'https://via.placeholder.com/600x400/1a1a2e/00ff66?text=Project+3'
+    title: 'MealCart',
+    description: 'MealCart is an AI-powered recipe generator that suggests personalized recipes based on available ingredients using generative AI.',
+    techStack: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Tailwind CSS'],
+    githubLink: 'https://github.com/sarveshjain0211/MealCart',
+    liveLink: 'https://meal-cart-theta.vercel.app/',
+    image: 'MealCart.png'
   }
 ];
 
