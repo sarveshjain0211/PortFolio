@@ -32,7 +32,7 @@ const About = () => {
             <div className="stat-box">
               <FaGraduationCap className="stat-icon" />
               <h4>Education</h4>
-              <p>B.Tech / Degree Name</p>
+              <p>B.Tech / CSE</p>
             </div>
           </div>
         </div>

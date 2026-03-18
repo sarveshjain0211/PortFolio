@@ -201,6 +201,47 @@ const Certifications = () => {
                   )}
                 </div>
               </div>
+
+              {/* TUF+ Card */}
+              <div className="cert-card glass-card stat-card">
+                <div className="cert-content full-width">
+                  <div className="stat-header">
+                    <div className="cert-icon-wrapper trophy tuf">
+                      <FaCode />
+                    </div>
+                    <div>
+                      <h4>
+                        <a href="https://takeuforward.org/profile/__sarvesh__0211" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                          TakeUForward (TUF+)
+                        </a>
+                      </h4>
+                      <h5>DSA Structured Learning</h5>
+                    </div>
+                  </div>
+
+                  <div className="stats-container tuf-container">
+                    <div className="stat-circle tuf-circle">
+                      <div className="stat-inner">
+                        <span className="stat-num" style={{ fontSize: '0.85rem' }}>TUF+</span>
+                        <span className="stat-label">Profile</span>
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', alignItems: 'flex-start' }}>
+                      <p className="cert-desc" style={{ margin: 0 }}>
+                        Solving curated DSA problems from Striver's A2Z Sheet — covering Arrays, Trees, Graphs, DP, and more.
+                      </p>
+                      <a
+                        href="https://takeuforward.org/profile/__sarvesh__0211"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="tuf-visit-btn"
+                      >
+                        Visit Profile →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
