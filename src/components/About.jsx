@@ -11,16 +11,13 @@ const About = () => {
         <div className="about-content glass-card">
           <div className="about-text">
             <p style={{ marginBottom: '1rem' }}>
-              Hello! I’m a Pre-Final Year B.Tech Computer Science Engineering student with a strong passion for problem-solving and continuous learning. My journey in tech began with Data Structures and Algorithms (DSA), where I’ve been sharpening my skills by tackling complex coding challenges. Solving DSA problems has not only strengthened my logical thinking but also laid a solid foundation for my development journey.
+              Hello! I’m a Pre-Final Year B.Tech CSE student passionate about problem-solving and continuous learning. My tech journey began with Data Structures and Algorithms (DSA), which laid a strong logical foundation for my development skills.
             </p>
             <p style={{ marginBottom: '1rem' }}>
-              I’m currently expanding my skill set by diving into Full Stack Web Development, learning how to build dynamic, user-friendly applications from front-end to back-end. I love creating functional, aesthetically pleasing projects and understanding the complete architecture of web applications.
-            </p>
-            <p style={{ marginBottom: '1rem' }}>
-              Beyond that, I’m deeply intrigued by the world of Artificial Intelligence. I’m eager to explore various AI tools and techniques, discovering how they can be integrated into real-world solutions to solve complex problems.
+              Currently, I'm diving into Full Stack Web Development to build dynamic, user-friendly applications. I'm also intrigued by Artificial Intelligence and eager to explore how AI tools can solve complex real-world problems.
             </p>
             <p>
-              I’m always excited to connect with fellow tech enthusiasts, share knowledge, and collaborate on exciting projects.
+              I’m always excited to connect, collaborate, and build exciting projects with fellow tech enthusiasts!
             </p>
           </div>
           <div className="about-stats">

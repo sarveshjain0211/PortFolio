@@ -37,7 +37,7 @@ const Certifications = () => {
             loading: false
           });
         } else {
-           setGfgData(prev => ({ ...prev, loading: false }));
+          setGfgData(prev => ({ ...prev, loading: false }));
         }
       })
       .catch(err => {
@@ -49,16 +49,16 @@ const Certifications = () => {
   return (
     <section id="certifications" className="section cert-section">
       <h2 className="section-title">Achievements & <span>Certifications</span></h2>
-      
+
       <div className="container">
         <div className="cert-grid">
-          
+
           {/* Certifications Block */}
-          <div className="cert-column">
+          <div className="cert-column glass-card">
             <h3 className="column-title"><FaCertificate className="title-icon" /> Certifications</h3>
-            
+
             <div className="cert-list">
-              <div className="cert-card glass-card">
+              <div className="cert-card">
                 <div className="cert-icon-wrapper">
                   <FaCertificate />
                 </div>
@@ -73,7 +73,7 @@ const Certifications = () => {
                 </div>
               </div>
 
-              <div className="cert-card glass-card">
+              <div className="cert-card">
                 <div className="cert-icon-wrapper">
                   <FaCertificate />
                 </div>
@@ -88,7 +88,7 @@ const Certifications = () => {
                 </div>
               </div>
 
-              <div className="cert-card glass-card">
+              <div className="cert-card">
                 <div className="cert-icon-wrapper">
                   <FaCertificate />
                 </div>
@@ -103,7 +103,7 @@ const Certifications = () => {
                 </div>
               </div>
 
-              <div className="cert-card glass-card">
+              <div className="cert-card">
                 <div className="cert-icon-wrapper">
                   <FaCertificate />
                 </div>
@@ -121,11 +121,11 @@ const Certifications = () => {
           </div>
 
           {/* Achievements Block */}
-          <div className="cert-column">
+          <div className="cert-column glass-card">
             <h3 className="column-title"><FaTrophy className="title-icon" /> Programming Profiles</h3>
-            
+
             <div className="cert-list">
-              <div className="cert-card glass-card stat-card">
+              <div className="cert-card stat-card">
                 <div className="cert-content full-width">
                   <div className="stat-header">
                     <div className="cert-icon-wrapper trophy">
@@ -140,12 +140,12 @@ const Certifications = () => {
                       <h5>Competitive Programming</h5>
                     </div>
                   </div>
-                  
+
                   {lcData.loading ? (
                     <p className="cert-desc loading-text">Loading stats...</p>
                   ) : (
                     <div className="stats-container">
-                      <div 
+                      <div
                         className="stat-circle total-circle"
                         style={{
                           background: `conic-gradient(
@@ -155,46 +155,46 @@ const Certifications = () => {
                           )`
                         }}
                       >
-                         <div className="stat-inner">
-                            <span className="stat-num">{lcData.total}</span>
-                            <span className="stat-label">Solved</span>
-                         </div>
+                        <div className="stat-inner">
+                          <span className="stat-num">{lcData.total}</span>
+                          <span className="stat-label">Solved</span>
+                        </div>
                       </div>
                       <div className="stat-details">
-                         <div className="stat-item easy"><span className="dot"></span> {lcData.easy} Easy</div>
-                         <div className="stat-item medium"><span className="dot"></span> {lcData.medium} Medium</div>
-                         <div className="stat-item hard"><span className="dot"></span> {lcData.hard} Hard</div>
+                        <div className="stat-item easy"><span className="dot"></span> {lcData.easy} Easy</div>
+                        <div className="stat-item medium"><span className="dot"></span> {lcData.medium} Medium</div>
+                        <div className="stat-item hard"><span className="dot"></span> {lcData.hard} Hard</div>
                       </div>
                     </div>
                   )}
                 </div>
               </div>
 
-              <div className="cert-card glass-card stat-card">
+              <div className="cert-card stat-card">
                 <div className="cert-content full-width">
                   <div className="stat-header">
-                     <div className="cert-icon-wrapper trophy gfg">
-                       <FaCode />
-                     </div>
-                     <div>
-                       <h4>
-                         <a href="https://www.geeksforgeeks.org/profile/sarveshjcecp?tab=activity" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your GeeksforGeeks profile link here">
-                           GeeksforGeeks
-                         </a>
-                       </h4>
-                       <h5>Problem Solving</h5>
-                     </div>
+                    <div className="cert-icon-wrapper trophy gfg">
+                      <FaCode />
+                    </div>
+                    <div>
+                      <h4>
+                        <a href="https://www.geeksforgeeks.org/profile/sarveshjcecp?tab=activity" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} title="Add your GeeksforGeeks profile link here">
+                          GeeksforGeeks
+                        </a>
+                      </h4>
+                      <h5>Problem Solving</h5>
+                    </div>
                   </div>
-                  
+
                   {gfgData.loading ? (
                     <p className="cert-desc loading-text">Loading stats...</p>
                   ) : (
                     <div className="stats-container gfg-container">
                       <div className="stat-circle gfg-circle">
-                         <div className="stat-inner">
-                            <span className="stat-num">{gfgData.total || "260+"}</span>
-                            <span className="stat-label">Problems</span>
-                         </div>
+                        <div className="stat-inner">
+                          <span className="stat-num">{gfgData.total || "100+"}</span>
+                          <span className="stat-label">Problems</span>
+                        </div>
                       </div>
                       <p className="cert-desc stat-desc">Practicing algorithmic problems and building core computer science concepts.</p>
                     </div>
@@ -203,7 +203,7 @@ const Certifications = () => {
               </div>
 
               {/* TUF+ Card */}
-              <div className="cert-card glass-card stat-card">
+              <div className="cert-card stat-card">
                 <div className="cert-content full-width">
                   <div className="stat-header">
                     <div className="cert-icon-wrapper trophy tuf">

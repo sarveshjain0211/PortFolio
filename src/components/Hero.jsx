@@ -13,7 +13,7 @@ const Hero = () => {
           <h1 className="animate-up delay-1">
             <span className="gradient-text">Sarvesh Jain</span>
           </h1>
-          <h3 className="animate-up delay-2">Full-Stack Developer & Problem Solver</h3>
+          <h3 className="animate-up delay-2">Full Stack Developer | Driven by Logic, Powered by Creativity.</h3>
           <p className="hero-description animate-up delay-3">
             I craft high-performance web applications and solve complex algorithms. 
             Passionate about modern design, clean code, and scalable architecture.
