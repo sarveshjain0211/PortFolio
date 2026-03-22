@@ -23,7 +23,7 @@ const About = () => {
           <div className="about-stats">
             <div className="stat-box">
               <FaMedal className="stat-icon" />
-              <h4>Experience</h4>
+              <h4>Expertise</h4>
               <p>Problem Solving & Web Dev</p>
             </div>
             <div className="stat-box">
