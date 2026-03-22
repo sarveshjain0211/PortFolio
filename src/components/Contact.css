@@ -1,8 +1,8 @@
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .contact-info, .contact-form {
