@@ -8,7 +8,7 @@ const projectsData = [
     description: 'Hyper-Local Multilingual Marketplace : I engineered a localized e-commerce ecosystem supporting 7+ regional languages to bridge the digital divide for native consumers. By eliminating the "language tax" of global apps, the platform enables seamless discovery and secure Razorpay-powered transactions in a user’s mother tongue.',
     techStack: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Razorpay', 'Tailwind CSS'],
     githubLink: 'https://github.com/sarveshjain0211/IndiKart',
-    liveLink: 'https://multi-lingual-e-commerce-store-proj-ten.vercel.app',
+    liveLink: 'https://indi-kart-multilingual.vercel.app/',
     image: '/indikart_preview.png'
   },
   {
@@ -16,7 +16,7 @@ const projectsData = [
     description: 'Campus Lost & Found: A Secure Recovery Hub : I engineered a centralized digital portal to automate item recovery in high-traffic environments. Featuring visual reporting and an Admin Approval Engine, the system validates claims and triggers automated email alerts to owners, replacing manual logs with a secure, verification-led workflow.',
     techStack: ['HTML', 'CSS', 'JavaScript','PHP','MySQL'],
     githubLink: 'https://github.com/sarveshjain0211/back2U',
-    liveLink: '#',
+    liveLink: 'https://back2u.great-site.net/?i=1',
     image: 'back2U.jpeg'
   },
   {

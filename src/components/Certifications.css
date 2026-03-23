@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
+  align-items: stretch;
 }
 
 .column-title {
@@ -25,10 +26,16 @@
   filter: drop-shadow(0 0 8px var(--neon-cyan-glow));
 }
 
+.cert-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .cert-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex: 1;
 }
 
 .cert-card {
@@ -40,6 +47,7 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: var(--transition);
+  flex: 1;
 }
 
 .cert-card:hover {
