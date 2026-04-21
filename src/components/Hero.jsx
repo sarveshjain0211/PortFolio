@@ -23,7 +23,7 @@ const Hero = () => {
             <a href="#projects" className="neon-btn primary">
               View My Work
             </a>
-            <a href="/Sarvesh_Jain_Final.pdf" download className="neon-btn">
+            <a href="/Sarvesh_Jain_Final_CV.pdf" download className="neon-btn">
               Download CV <FaDownload style={{ marginLeft: '8px' }} />
             </a>
           </div>
