@@ -43,7 +43,7 @@ const About = () => {
               <h4>Bachelor of Technology - Computer Science and Engineering</h4>
               <h5>Lovely Professional University (Punjab, India)</h5>
               <span className="timeline-date">August 2023 - Present</span>
-              <p>CGPA: 8.78</p>
+              <p>CGPA: 8.76</p>
             </div>
           </div>
 
